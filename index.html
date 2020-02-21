@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion du panier</title>
+  </head>
+  <body>
+    <section>
+      <h1>Gestion du panier</h1>
+      <hr />
+      <p>
+        <label for="code">Code :</label>
+        <input
+          type="number"
+          id="code"
+          min="1"
+          max="10000"
+          placeholder="Min: 1, max: 10000"
+          required
+        />
+      </p>
+      <p>
+        <label for="quantity">Quantité :</label>
+        <input
+          type="number"
+          id="quantity"
+          min="1"
+          max="100"
+          placeholder="Min: 1, max: 100"
+          required
+        />
+      </p>
+      <p>
+        <label for="price">Prix unitaire :</label>
+        <input id="price" disabled /> €
+      </p>
+      <button id="cartButton">Ajouter au panier</button>
+    </section>
+
+    <section>
+      <h1>Contenu du panier</h1>
+      <hr />
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Qte</th>
+            <th>Prix unitaire</th>
+            <th>Prix de la ligne</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+
+        <tbody id="cart"></tbody>
+      </table>
+
+      <p>Prix total du panier : <span id="sum"></span></p>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
