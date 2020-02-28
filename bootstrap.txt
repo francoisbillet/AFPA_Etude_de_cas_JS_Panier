@@ -1,0 +1,20 @@
+Bootstrap :
+
+- 3 containes différents : 
+    .container : max-width à chaque breakpoint
+    .container-fluid : width: 100% à tous les breakpoint
+    .container-{breakpoint} : width: 100% jusqu'au breakpoint spécifié
+
+- row désigne une ligne et col une colonne
+
+- w-100 pour mettre les prochaines colonnes à la ligne
+
+- col-xl (écrans très grands), col-lg (grands écrans), col-md (écrans moyens), col-sm (écrans petits) et col- (écrans tout petits)
+
+- col-* pour augmenter la largeur d'une colonne (col-4 largeur de base)
+12 est le nb max de colonnes
+
+- col-{breakpoint}- auto pour ajuster la largeur d'une colonne à son contenu
+
+- col-sm-* pour n'avoir que des rows sur un petit écran (responsive)
+

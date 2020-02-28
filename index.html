@@ -3,60 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Gestion du panier</title>
   </head>
   <body>
-    <section>
-      <h1>Gestion du panier</h1>
-      <hr />
-      <p>
-        <label for="code">Code :</label>
-        <input
-          type="number"
-          id="code"
-          min="1"
-          max="10000"
-          placeholder="Min: 1, max: 10000"
-          required
-        />
-      </p>
-      <p>
-        <label for="quantity">Quantité :</label>
-        <input
-          type="number"
-          id="quantity"
-          min="1"
-          max="100"
-          placeholder="Min: 1, max: 100"
-          required
-        />
-      </p>
-      <p>
-        <label for="price">Prix unitaire :</label>
-        <input id="price" disabled /> €
-      </p>
-      <button id="cartButton">Ajouter au panier</button>
-    </section>
+    <header class="container-fluid" id="banniere">
+      <h1 class="row justify-content-center">Gestion du panier</h1>
+    </header>
 
-    <section>
-      <h1>Contenu du panier</h1>
-      <hr />
-      <table>
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Qte</th>
-            <th>Prix unitaire</th>
-            <th>Prix de la ligne</th>
-            <th>Supprimer</th>
-          </tr>
-        </thead>
+    <main class="container">
+      <div class="row">
+        <section class="col-md">
+          <h2>Ajouter au panier</h1>
+          <div>
+            <div class="form-group row justify-content-between">
+              <label for="code" class="bold col-form-label">Code :</label>
+              <div class="col-5">
+                <input class="form-control"
+                  type="number"
+                  id="code"
+                  min="1"
+                  max="10000"
+                  placeholder="Min: 1, max: 10000"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group row justify-content-between">
+              <label for="quantity" class="bold col-form-label">Quantité :</label>
+              <div class="col-5">
+                <input class="form-control"
+                  type="number"
+                  id="quantity"
+                  min="1"
+                  max="100"
+                  placeholder="Min: 1, max: 100"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group row justify-content-between">
+              <label for="price" class="bold col-form-label">Prix unitaire :</label>
+              <div class="col-5">
+                <input class="form-control" id="price" readonly /> €
+              </div>
+            </div>
+            <button id="cartButton">Ajouter au panier</button>
+          </div>
+        </section>
+        
+        <section class="col-md">
+          <h2>Contenu du panier</h1>
+          <hr />
+          <table>
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Qte</th>
+                <th>Prix unitaire</th>
+                <th>Prix de la ligne</th>
+                <th>Supprimer</th>
+              </tr>
+            </thead>
 
-        <tbody id="cart"></tbody>
-      </table>
+            <tbody id="cart"></tbody>
+          </table>
 
-      <p>Prix total du panier : <span id="sum"></span></p>
-    </section>
+          <p class="bold">Prix total du panier : <span id="sum"></span></p>
+        </section>
+      </div>
+    </main>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-8">col-sm-8</div>
+        <div class="col-sm-4">col-sm-4</div>
+      </div>
+      <div class="row">
+        <div class="col-sm">col-sm</div>
+        <div class="col-sm">col-sm</div>
+        <div class="col-sm">col-sm</div>
+      </div>
+    </div> -->
+
     <script src="index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script> -->
   </body>
 </html>
