@@ -1,7 +1,31 @@
+body {
+  font-family: Times;
+}
+
 #banniere {
-  background-color: silver;
+  background-color: #28a745;
+  height: 100px;
+}
+
+#banniere h1 {
+  line-height: 100px;
+  font-family: 'Arial Black', Courier, monospace;
+  color: black;
+  text-shadow: 1px 1px white;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.input-group-text {
+  background-color: white;
+}
+
+table thead tr{
+  border-bottom: 1px solid lightgray;
+}
+
+hr {
+  border-color: #28a745;
 }

@@ -95,25 +95,37 @@ cartButtonElt.addEventListener("click", addToCart);
 // ---------------------------------- MODIFICATION DE L'AFFICHAGE ----------------------------------
 
 // Affichage d'une nouvelle ligne dans le tableau représentant le panier
+let count=0;
 const addToTableCart = (code, quantity, priceU, price) => {
   const trElt = document.createElement("tr");
   trElt.setAttribute("id", code);
+  trElt.setAttribute("class", "row pb-2 pt-2")
+  if (count != 0) {
+    trElt.setAttribute("style", "border-top: 1px solid lightgray")
+  }
+  count++;
   const tdCodeElt = document.createElement("td");
   tdCodeElt.innerHTML = code;
+  tdCodeElt.setAttribute("class", "col-2");
   const tdQtyElt = document.createElement("td");
   tdQtyElt.innerHTML = quantity;
+  tdQtyElt.setAttribute("class", "col-2");
   const tdPriceUElt = document.createElement("td");
   tdPriceUElt.innerHTML = priceU;
+  tdPriceUElt.setAttribute("class", "col");
   const tdPriceElt = document.createElement("td");
   tdPriceElt.innerHTML = price;
+  tdPriceElt.setAttribute("class", "col");
   const tdDeleteElt = document.createElement("td");
+  tdDeleteElt.setAttribute("class", "col");
   const deleteBtnElt = document.createElement("button");
-  deleteBtnElt.textContent = "Retirer";
+  deleteBtnElt.textContent = "✖️ Retirer";
   deleteBtnElt.addEventListener("click", function() {
     trElt.remove();
     cart = cart.filter(line => line.code !== code);
     displaySumCart();
   });
+  deleteBtnElt.setAttribute("class", "btn btn-danger");
   tdDeleteElt.appendChild(deleteBtnElt);
   trElt.appendChild(tdCodeElt);
   trElt.appendChild(tdQtyElt);
